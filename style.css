@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: relative;
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+  border-bottom: 3px solid red;
+  overflow: hidden;
+}
+
+/* Logo fixed at extreme left */
+.logo-fixed-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px; /* Adjust size as needed */
+  height: auto;
+  z-index: 2;
+}
+
+/* Centered branding (not affected by logo) */
+.branding-centered {
+  text-align: center;
+  max-width: 100%;
+}
+
+.branding-centered h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: #ff3333;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 1rem;
+}
+nav a {
+  color: red;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+h2 {
+  color: #ff3333;
+  margin-bottom: 2rem;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.gallery img, .gallery video {
+  width: 300px;
+  height: auto;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+/* Services */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.service {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border: 1px solid #ff3333;
+  border-radius: 8px;
+  width: 250px;
+}
+.service h3 {
+  color: red;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact */
+.contact-links a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.contact-links a:hover {
+  background-color: #ff6666;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #000;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .branding {
+    margin-top: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .gallery img, .gallery video {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .logo-fixed-left {
+    width: 80px;
+    left: 10px;
+  }
+
+  .branding-centered h1 {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}
